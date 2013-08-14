@@ -1,0 +1,74 @@
+<div id='status' data-page='home-session'>
+
+<% @sessionid %>
+<div id='top'>
+<a href='http://generative.edb.utexas.edu/webrtc/'>    <%= image_tag 'pic1.png', :style => 'vertical-align:bottom', :size => '110x30' %></a>
+
+</div>
+  
+    <div id='middle'>
+      <div style='width:101px' id='one' class='tab'>
+        <b>Chat</b>    
+      </div>
+      <div style='width:101px;border-left:3px solid black;border-right:3px solid black;' id='two' class='tab'>
+        <b>Video</b>
+      </div>
+      <div style='width:102px'id='three' class='tab'>
+        <b>Sketch</b>
+      </div>
+      <br style='clear:left' />
+    </div>
+    <div id='chatOne' class='inside'>
+       <p>
+       <div id='chatLog'></div>
+       <br> 
+       <input type='text' id='chatInput'>
+       <button id='sendChat'>Send</button>
+       <button id='clearChat'>Clear</button>
+    </div> 
+
+    <div id='videoTwo' class='inside'>
+      <p>
+ <video id="me" autoplay></video>
+<div id='youVideo'><video id="you" class="flip" autoplay></video></div>
+ 
+    </div>
+
+    <div id='sketchThree' class='inside' style='text-align:center'>
+      <p>
+      <canvas id='sketch' width='330' height='290' style='border:2px solid gray;'></canvas>
+      <button id='clearSketch'>Clear</button>
+    </div>
+  
+
+<p><b>How Client works:</b>
+    <br>1. Check if this Browser supports WebRTC.
+    <br>2. Create an audio/video stream.
+    <br>3. Attach the video stream to the &#60;video&#62; tag.
+    <br>4. Identify room from url. Connect to webrtc.io node server and room.
+    <br>4. Connect to socket.io node server and room.
+    <br>5. Listen for peers from webrtc.io. Add their streams and attach them to &#60;video&#62; tags.
+    <br>6. Listen for peers from socket.io. Add their text messages or sketches.
+
+    <p><b>How WebRTC.io Server works:</b>
+    <br>1. Run webrtc.io node server.
+    <br>2. Listen for members and their rooms.
+    <br>3. When members connect or disconnect, tell other room members.
+    
+    <p><b>How Socket.io Server works:</b>
+    <br>1. Run socket.io node server.
+    <br>2. Listen for members and their rooms.
+    <br>3. When members connect or disconnect, tell other room members.
+    <br>4. When members send text messages or sketches, tell other room members.
+
+    <p><b>Requires:</b>
+    <br>Chrome. May have to go to chrome://flags and enable PeerConnection.
+
+    <p><b>References:</b>
+    <br>Uses an abstraction layer for WebRTC called WebRTC.io <a href='https://github.com/webRTC/webRTC.io'>https://github.com/webRTC/webRTC.io</a>
+    <br>Uses an abstraction layer for WebSockets called Socket.io <a href='http://socket.io/'>http://socket.io/</a>
+    <br>Based on <a href='http://107.20.223.140/'>http://107.20.223.140/</a>
+
+    <p><b>Email:</b>
+    <br>c_remmler@yahoo.com
+

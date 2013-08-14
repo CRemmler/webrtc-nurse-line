@@ -1,0 +1,30 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/bin/npm', 'install', 'express' ]
+2 info using npm@1.1.70
+3 info using node@v0.8.16
+4 verbose read json /var/www/web_apps/webrtc/app/assets/javascripts/package.json
+5 verbose read json /var/www/web_apps/webrtc/app/assets/javascripts/node_modules/npm-debug.log/package.json
+6 verbose read json /var/www/web_apps/webrtc/app/assets/javascripts/node_modules/socket.io/package.json
+7 verbose read json /var/www/web_apps/webrtc/app/assets/javascripts/node_modules/box2dweb/package.json
+8 error TypeError: Cannot call method 'forEach' of undefined
+8 error     at /usr/lib/node_modules/npm/lib/install.js:453:16
+8 error     at cb (/usr/lib/node_modules/npm/node_modules/slide/lib/async-map.js:48:11)
+8 error     at fs.readdir.packages.forEach.context.family.(anonymous function) (/usr/lib/node_modules/npm/lib/install.js:446:48)
+8 error     at /usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:80:40
+8 error     at parseJson (/usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:109:32)
+8 error     at /usr/lib/node_modules/npm/node_modules/read-package-json/read-json.js:88:33
+8 error     at fs.js:117:20
+8 error     at /usr/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:53:5
+8 error     at /usr/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:62:5
+8 error     at Object.oncomplete (fs.js:297:15)
+9 error If you need help, you may report this log at:
+9 error     <http://github.com/isaacs/npm/issues>
+9 error or email it to:
+9 error     <npm-@googlegroups.com>
+10 error System Linux 2.6.32-279.19.1.el6.x86_64
+11 error command "node" "/usr/bin/npm" "install" "express"
+12 error cwd /var/www/web_apps/webrtc/app/assets/javascripts
+13 error node -v v0.8.16
+14 error npm -v 1.1.70
+15 error type non_object_property_call
+16 verbose exit [ 1, true ]

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebRTC</title>
+  <% stylesheet_link_tag    "application", :media => "all" %>
+
+ <% javascript_include_tag "application" %>
+
+  <%= stylesheet_link_tag    "scaffolds" %>
+ <%= javascript_include_tag "jquery" %>
+ <%= javascript_include_tag "jquery_ujs" %>
+ <%= javascript_include_tag "kinetic-v4.0.0.min.js" %>
+ <%= javascript_include_tag "menu" %>
+
+ <%= javascript_include_tag "webrtc" %>
+ <% javascript_include_tag "io" %>
+ <%= javascript_include_tag "webrtc.io" %> 
+<% javascript_include_tag "/node_modules/webrtc.io-client/lib/webrtc.io.js" %>
+
+ <%= javascript_include_tag "http://www.remmler.org:60017/socket.io/socket.io.js" %>
+<!--/var/www/web_apps/webrtc/node_modules/webrtc.io/lib/webrtc.io.js:2:23)-->
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
